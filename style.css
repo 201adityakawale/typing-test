@@ -1,0 +1,281 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0b1020;
+    --card: #151c30;
+    --border: #29334d;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #7c5cff;
+    --green: #34d399;
+    --red: #fb7185;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 35px 18px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header h1 span {
+    color: var(--accent);
+}
+
+header p,
+.test-header h3,
+footer {
+    color: var(--muted);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 12px;
+    text-align: center;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    color: var(--green);
+}
+
+.test-card,
+.result {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.passage {
+    font-size: 19px;
+    line-height: 1.9;
+    color: #aab6cc;
+    min-height: 140px;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+.passage span.correct {
+    color: var(--green);
+}
+
+.passage span.incorrect {
+    color: var(--red);
+    background: #4a2030;
+    border-radius: 3px;
+}
+
+.passage span.current {
+    border-left: 2px solid var(--accent);
+}
+
+textarea {
+    width: 100%;
+    min-height: 125px;
+    resize: vertical;
+    background: #0b1020;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    padding: 16px;
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.7;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: var(--accent);
+}
+
+textarea:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.progress-track {
+    height: 6px;
+    background: #29334d;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.2s;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+#message {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: white;
+}
+
+.secondary-btn {
+    background: #29334d;
+    color: var(--text);
+}
+
+.result {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.result h2 {
+    margin-bottom: 10px;
+}
+
+.result > p {
+    color: var(--muted);
+}
+
+.result-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.result-stats div {
+    background: #0b1020;
+    border-radius: 12px;
+    padding: 18px 8px;
+}
+
+.result-stats span {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.result-stats p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .test-card,
+    .result {
+        padding: 18px;
+    }
+
+    .test-header {
+        align-items: flex-start;
+    }
+
+    .test-header h3 {
+        font-size: 15px;
+    }
+
+    .passage {
+        font-size: 17px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .result-stats {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Type<span>Master</span></h1>
+            <p>Test your typing speed and accuracy</p>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Time Left</p>
+                <h2 id="timer">60s</h2>
+            </div>
+            <div class="stat-card">
+                <p>WPM</p>
+                <h2 id="wpm">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Accuracy</p>
+                <h2 id="accuracy">100%</h2>
+            </div>
+            <div class="stat-card">
+                <p>Best WPM</p>
+                <h2 id="best">0</h2>
+            </div>
+        </section>
+
+        <section class="test-card">
+            <div class="test-header">
+                <h3>Type the text below</h3>
+                <button id="new-text" class="secondary-btn">
+                    New Text ↻
+                </button>
+            </div>
+
+            <div id="passage" class="passage"></div>
+
+            <textarea
+                id="typing-input"
+                placeholder="Start typing here..."
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="off"
+                aria-label="Type the displayed paragraph here"
+            ></textarea>
+
+            <div class="progress-track">
+                <div id="progress" class="progress"></div>
+            </div>
+
+            <div class="actions">
+                <p id="message">Start typing to begin the test.</p>
+                <button id="restart" class="primary-btn">
+                    Restart Test
+                </button>
+            </div>
+        </section>
+
+        <section id="result" class="result hidden">
+            <h2>Test Completed! 🎉</h2>
+            <p>Your final typing performance</p>
+            <div class="result-stats">
+                <div>
+                    <span id="final-wpm">0</span>
+                    <p>Words Per Minute</p>
+                </div>
+                <div>
+                    <span id="final-accuracy">100%</span>
+                    <p>Accuracy</p>
+                </div>
+                <div>
+                    <span id="final-correct">0</span>
+                    <p>Correct Characters</p>
+                </div>
+            </div>
+            <button id="try-again" class="primary-btn">
+                Try Again
+            </button>
+        </section>
+
+        <footer>
+            Built with HTML, CSS & JavaScript
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
