@@ -15,3 +15,7 @@ I created this project to practice my web development skills and make a website 
 * HTML
 * CSS
 * JavaScript
+
+
+## Live Website Link
+ https://201adityakawale.github.io/typing-test/
